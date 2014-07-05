@@ -3,6 +3,7 @@
 // https://chrome.google.com/webstore/detail/emmet-livestyle/diebikgmpmeppiilkaijjbdgciafajmg
 @import "normalize.styl"
 @import "fonts.styl" 
+@import "icono.styl"
 
 headercolor = rgba(255,255,255,0.9)
 body
@@ -68,7 +69,7 @@ header
 	.social
 		position absolute
 		left 0px
-		bottom 0px
+		bottom 40px
 		display inline-block
 		width 100%
 		background #FFF
@@ -80,12 +81,23 @@ section
 	position absolute
 	left 22%
 	width 78%
-
 article
 	position absolute 
-	height 350px
+	height 355px
 	width 100%
+footer
+	position fixed
+	background transparent
+	width 100%
+	bottom 0%
+	left 0px
+	z-index 2
 
+	p 
+		position relative
+		text-align right
+		color headercolor
+		font-style italic
 .item-principal
 	//background #0188E1
 	position relative 
@@ -126,22 +138,24 @@ article
 					
 			h1
 				font-size 1.5em
-
-
 .servicios
 	color headercolor
 	background #222
 	position relative
 	top 100%
-	width 100%
-	height 98%
+	width 99.6%
+	height 90%
 	left 0px
-	overflow hidden
+	z-index 1
+	//overflow hidden
+	//border 0.4px solid white
 		
 	.servicio
 		text-align left
+		height 85%
 		position relative
 		display inline-block
+		vertical-align top
 		width 24%
 
 		.titulo-servicio
@@ -150,11 +164,13 @@ article
 			font-weight bold
 			font-style italic
 			text-align center
+			height 10%
+			margin 1em 0
 		.descripcion-servicio
 			font-style italic
 			margin 1em
 			text-align left
-			margin-bottom 1em
+			margin-bottom 1em 0
 		.mas-servicio
 			position absolute
 			color headercolor
@@ -169,11 +185,129 @@ article
 			&:hover
 				color black
 				background #FFF
+.item-secundario
+	height 40%
+	position absolute
+	display block
+	//background gold
+	bottom -8%
+	text-align center
+	color headercolor
+	font-weight normal
+	
+	.item
+		 
+		display inline-block
+		position relative
+		height 64%
+		width 20%
+		padding 1em 0.5em 0.4em 0.5em
+		cursor: default;
+		perspective: 900px;
 
-
-
+		figure
+			background transparent
+			width 200px
+			margin 0
+			position relative
+			transform-style: preserve-3d;
+				
+			img
+				border-radius 1em
+				border 1px solid #0188E1
+				box-shadow 1px 1px 1px #0188E1
+				width 100%
+.item-descripcion
+	display none
+	position absolute
+	top 0
+	margin 50% 0
+	padding 0
+	text-align center
+	color black
+	//background red
+	height 50%
+	width 100%
+.item-secundario-link
+	text-decoration none
+	color headercolor
+	position relative
+	border-radius 2px
+	left 35%
+	background #0188E1
+	width 30%
+	padding 1.5em 1em
+	display block
+.item-secundario-titulo
+	font-style italic
+	font-weight normal
+.item-secundario-descripcion
+	font-style 1em
+	font-style italic
 
 /*
+
+.item-secundario
+	border-top 1px solid white
+	color headercolor
+	position absolute
+	background #1E9ADD
+	bottom -73%
+	height 100%
+	text-align center
+	.item-secundario-titulo
+		font-style 1.5em
+		font-style italic
+	.item-secundario-descripcion
+		font-weight bold
+		font-style 1em
+	.item-secundario-link
+		text-decoration none
+		text-align center
+		left 42%
+		color rgba(0,0,0,0.5)
+		position absolute
+	.item-secundario-link:after
+		content "  --->"
+		&:hover
+			color headercolor
+.item
+	background #1E9ADD
+	display inline-block
+	position relative
+	left 0px
+	height 254px
+	width 20%
+	top 24px
+	float left
+	vertical-align top
+
+	.item-imagen
+		width 100%
+		height 100px
+		margin 0px
+		img
+			width 100%
+
+		img:hover
+			margin 1em
+
+		.item-descripcion
+			display none
+			position absolute 
+			text-align center
+			margin 0
+			padding 0
+
+
+
+
+
+
+
+
+
+
 .servicios
 	background silver
 	position relative
