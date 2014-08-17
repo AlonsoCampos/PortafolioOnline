@@ -1,0 +1,158 @@
+
+@import "normalize.styl"
+
+blanco = #EEE
+azul = #0188E1
+body
+	color rgba(0,0,0,0.8)
+
+#acerca-experiencia
+	border-top 1px solid rgba(0,0,0,0.2)
+	//background blue
+	width 100%
+	#acerca-bio 
+		//background yellow
+		width 45%
+		p
+			margin 0.8em
+			
+	#acerca-portafolio
+		//background red
+		width 45%
+		p
+			margin 0.8em
+	#acerca-bio, #acerca-portafolio
+		vertical-align top
+		display inline-block
+		position relative
+
+#acerca-historial
+	border-top 1px solid rgba(0,0,0,0.2)
+	//background blue
+	width 100%
+
+	#historial
+		//background red
+		width 45%
+		.fecha
+			//background yellow
+			width 100%
+			.año
+				//background silver
+				font-size 2em
+				width 20%
+			.historia
+				//background green
+				width 60%
+			.año, .historia
+				vertical-align top
+				display inline-block
+		p
+			margin 0.8em
+	#mapa
+		background azul
+		height 300px
+		width 100%
+		.titulo-seccion
+			color black
+			margin 1em
+
+	#ultimo-trabajo
+		//background yellow
+		width 45%
+		p
+			margin 0.8em
+		#trabajos
+			//background silver
+			width 100%
+			figure
+				margin 0 1em
+			
+				display inline-block
+				width 100px
+				img
+					width 100%
+				&:hover
+					padding 1em
+					background azul	
+
+	#historial, #ultimo-trabajo
+		vertical-align top
+		display inline-block
+
+#acerca-principal
+	background azul
+	display inline-block
+	color blanco
+	position relative
+	height 160px
+	overflow hidden
+	text-shadow -3.8px 6.5px 5px rgba(0, 0, 0, 0.2)
+	width 100%
+
+	#acerca-avatar
+		//background red
+		margin 0
+		position absolute
+		right 2%
+		top 0
+		width 150px
+		img
+			box-shadow 10px 1px 1px black
+			border-radius 50%
+			width 100%	
+
+	#acerca-titulo
+		//background black
+		height 10%
+		font-style italic
+		top 10px
+		width 50%
+	#acerca-subtitulo
+		//background green
+		height 10%
+		font-style normal
+		font-size 1.3em
+		top 60px
+		width 50%
+		strong
+			font-style italic
+	#acerca-titulo, #acerca-subtitulo
+		position absolute
+		left 5%
+#acerca-personal
+	background transparent
+	width 100%
+
+	#info-habilidades
+		width 28%
+	#info-premios
+		width 35%
+		p
+			position relative
+			left 10px
+			width 100%	
+			strong
+				font-weight normal
+				color azul
+
+	#info-personal
+		width 35%
+		p
+			position relative
+			left 10px
+
+	#info-habilidades,#info-personal,#info-premios
+		background transparent
+		display inline-block
+		position relative
+		vertical-align top
+
+.titulo-seccion
+	font-weight bold
+	font-style italic
+	color azul
+	text-shadow -3.8px 6.5px 5px rgba(0, 0, 0, 0.2)
+
+.marcado
+	border-bottom 1px solid rgba(0,0,0,0.3)
