@@ -1,16 +1,44 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-	<title>Héctor Campos Alonso</title>
-	<meta charset="UTF-8">
-	<link rel="stylesheet" type="text/css" href="css/estilos-acerca.css">
+	<title>Desarrollador Frontend y Backend</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width , initial-scale=1 ,maximum-scale=1" />
+	<link rel="stylesheet" type="text/css" href="css/estilos.css" />
+	<link href='http://fonts.googleapis.com/css?family=Arimo|Playfair+Display:400italic' rel='stylesheet' type='text/css'>
 </head>
 <body>
-	<section>
+	<header class="main-Header">
+		
+		<figure class="header-Imagen">
+			<img src="img/3.jpg" />
+			<figcaption class="header-Description">
+				<span>Héctor Campos Alonso</span>
+				<p>Ingeniero en Tecnológias de la Información </p>
+			</figcaption>
+		</figure>
+
+		<nav class="header-Nav">
+			<ul class="header-List">
+				<li class="header-list-item"><a href="index.html" class="icon-home" >Inicio</a></li>
+				<li class="header-list-item"><a href="galeria.html" class="icon-images" >Fotos</a></li>
+				<li class="header-list-item"><a href="tutorial.html" class="icon-tutorial" >Tutoriales</a></li>
+				<li class="header-list-item"><a href="acerca-de.html" class="icon-user2">Acerca de Mi</a></li>
+			</ul>
+		</nav>
+
+		<section class='header-Social'>
+			<a class="header-Social-Item" href="https://twitter.com/Huixcospartan"><img src="img/twitter.png"></a>
+			<a class="header-Social-Item" href="https://www.facebook.com/AlonsoSilence"><img src="img/facebook.png"></a>
+			<a class="header-Social-Item" href="https://github.com/AlonsoCampos"><img src="img/github.png"></a>
+			<a class="header-Social-Item" href="http://www.youtube.com/channel/UCZOTedwROfSWgUwNarg3R1g"><img src="img/youtube.png"></a>
+		</section>
+	</header>
+
+	<section class="principal-CV">
 		<article id='acerca-principal'>
 			<h1 id='acerca-titulo'>Héctor Campos Alonso</h1>
 			<h2 id='acerca-subtitulo'>Desarrollador <strong>Frontend</strong> y <strong>Backend</strong></h2>
-			<figure id="acerca-avatar"><img src="img/3.jpg"></figure>
 		</article>
 
 		<article id="acerca-personal">
@@ -118,12 +146,16 @@
 			</article>
 		</article>
 
+
 	</section>
 
-	<footer>
+	<footer class="footer">
 		<p>Copyright © 2014
 		 Lenguajes de Programacion.
 		</p>
 	</footer>
+
+	<script type="text/javascript" src='js/prefixfree.js'></script>
+	<script type="text/javascript" src='js/jquery.js'></script>
 </body>
 </html>
