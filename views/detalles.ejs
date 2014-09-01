@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Héctor Campos Alonso</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width , initial-scale=1 ,maximum-scale=1" />
+  <link rel="stylesheet" type="text/css" href="/stylesheets/estilos.css" />
+  <link href='http://fonts.googleapis.com/css?family=Arimo|Playfair+Display:400italic' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <header class="main-Header">
+    
+    <figure class="header-Imagen">
+      <img src="/images/3.jpg" />
+      <figcaption class="header-Description">
+        <span>Héctor Campos Alonso</span>
+        <p>Ingeniero en Tecnológias de la Información </p>
+      </figcaption>
+    </figure>
+
+    <nav class="header-Nav">
+      <ul class="header-List">
+        <li class="header-list-item"><a href="/" class="icon-home" >Inicio</a></li>
+        <li class="header-list-item"><a href="/galeria.html" class="icon-images" >Fotos</a></li>
+        <li class="header-list-item"><a href="tutorial.html" class="icon-tutorial" >Tutoriales</a></li>
+        <li class="header-list-item"><a href="/acerca-de" class="icon-user2">Acerca de Mi</a></li>
+      </ul>
+    </nav>
+
+    <section class='header-Social'>
+      <a class="header-Social-Item" href="https://twitter.com/Huixcospartan"><img src="/images/twitter.png"></a>
+      <a class="header-Social-Item" href="https://www.facebook.com/AlonsoSilence"><img src="/images/facebook.png"></a>
+      <a class="header-Social-Item" href="https://github.com/AlonsoCampos"><img src="/images/github.png"></a>
+      <a class="header-Social-Item" href="http://www.youtube.com/channel/UCZOTedwROfSWgUwNarg3R1g"><img src="/images/youtube.png"></a>
+    </section>
+  </header>
+  <section class="principal-Description principal-CV">
+    <article id='acerca-principal'>
+      <h1 id='acerca-titulo'>Héctor Campos Alonso</h1>
+      <h2 id='acerca-subtitulo'>Desarrollador <strong>Frontend</strong> y <strong>Backend</strong></h2>
+    </article>
+
+    <h1 class="description-Title"><%=project.title%></h1>
+    <p class="description-info">
+      <%=project.description%>
+    </p>
+    <figure class="description-imagen"><img src="/images/wanagow.png"/></figure>
+
+    <p class="description-link">
+      <a class="description-link-a" href="<%=project.link%>">Repositorio de Sistema Central</a>
+    </p>
+
+    
+    <article class="description description-tecnologies">Tecnologias Utilizadas: 
+      <ul class="description-list">
+        <li class="description-item"><p><%=project.tecnologie%></p></li>
+      </ul>
+    </article>
+    <article class="description description-plataforms">Plataformas soportadas: 
+      <ul class="description-list">
+        <li class="description-item icon-<%=project.icon%>"><p><%=project.plataform%></p></li>
+      </ul>
+    </article>
+
+    <article class="description description-team">Equipo de desarrollo: 
+      <ul class="description-list">
+        <li class="description-item"><p><%=project.developer%></p></li>
+      </ul>
+    </article>
+
+
+  </section>
+
+  <footer class="footer">
+    <p>Copyright © 2014
+     Lenguajes de Programacion.
+    </p>
+  </footer>
+
+  <script type="text/javascript" src='/javascripts/prefixfree.js'></script>
+  <script type="text/javascript" src='/javascripts/jquery.js'></script>
+</body>
+</html>
