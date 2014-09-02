@@ -18,3 +18,13 @@ Diseño de Mi informacion Personal
 Diseño de Detalles de Projecto 
 
 ![Image](https://raw.githubusercontent.com/AlonsoCampos/LenguajesdeProgramacion/master/detalles.png)
+
+
+Modulo de Agregar Projectos
+
+![Image](https://raw.githubusercontent.com/AlonsoCampos/LenguajesdeProgramacion/master/Agregar Proyectos.png)
+
+
+Modulo de Projectos Recientes
+
+![Image](https://raw.githubusercontent.com/AlonsoCampos/LenguajesdeProgramacion/master/Proyectos.png)
