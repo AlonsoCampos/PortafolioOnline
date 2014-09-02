@@ -21,8 +21,8 @@
     <nav class="header-Nav">
       <ul class="header-List">
         <li class="header-list-item"><a href="/" class="icon-home" >Inicio</a></li>
-        <li class="header-list-item"><a href="/galeria.html" class="icon-images" >Fotos</a></li>
-        <li class="header-list-item"><a href="tutorial.html" class="icon-tutorial" >Tutoriales</a></li>
+        <li class="header-list-item"><a href="/" class="icon-images" >Fotos</a></li>
+        <li class="header-list-item"><a href="" class="icon-tutorial" >Tutoriales</a></li>
         <li class="header-list-item"><a href="/acerca-de" class="icon-user2">Acerca de Mi</a></li>
       </ul>
     </nav>
@@ -45,7 +45,7 @@
           <figcaption class="second-Header-Description">
             <h1>Innovación y Emprendimiento</h1>
             <p>Desarrollamos tus proyectos web, escritorio, mobiles</p>
-            <a href="/add">Mas información</a>
+            <a href="#">Mas información</a>
           </figcaption> 
         </figure>
       </article>
@@ -76,20 +76,22 @@
       <h2 class="container-Title">Proyectos Recientes</h2>
       <h4 class="container-Description">Te invitamos a conocer nuestros proyectos mas recientes</h4>
       <a  class="container-Link" href="#" >Ver todos los proyectos</a>
+      <p class="container-add"><a  class="container-Link" href="/add" >Agregar proyectos</a></p>
 
       <section class="container-item">
 
         <% projects.forEach(function(project){ %>
-            <article class="item">
-                <figure class="item-Imagen">
-                  <img src="/images/wanagow.png">
-                  <figcaption class="item-Image-Description">
-                    <%= project.title%>
-                    <p class="icon-<%= project.icon%>"><%= project.descriptionshorte%></p>
-                    <a href="/detalles/<%=project._id%>">Ver <%= project.title%></a>
-                  </figcaption>
-              </figure> 
-            </article>
+            <a href="/detalles/<%=project._id%>">
+              <article class="item">
+                  <figure class="item-Imagen">
+                    <img src="/images/wanagow.png">
+                    <figcaption class="item-Image-Description">
+                      <%= project.title%>
+                      <p class="icon-<%= project.icon%>"><%= project.descriptionshorte%></p>
+                    </figcaption>
+                </figure> 
+              </article>
+            </a>
         <%})%>
 
 

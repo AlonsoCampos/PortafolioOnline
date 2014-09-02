@@ -166,16 +166,22 @@ body
 			&:hover
 				color black
 				background blanco
+		.container-add
+			margin 4em 0
 		.container-item
 			margin 4em 0 0 0
 			background #222
 			width 100%
+			a
+				text-decoration none
 			.item 
 				font-family: 'Playfair Display', serif;
 				display inline-block
 				vertical-align top
 				margin 2em 0 0 0
 				width 20%
+				&:hover
+					margin 0.1em 0
 				.item-Imagen
 					margin 0
 					width 50%
@@ -191,6 +197,13 @@ body
 							margin 0
 						p
 							margin 0
+						a
+							color azul
+							text-decoration none
+						span
+							color blanco
+
+
 						
 .principal-CV
 	position absolute
@@ -198,6 +211,37 @@ body
 	left 20%
 	background blanco
 	width 80%
+.form-action
+	margin 5em 1em
+.form-Left
+	
+.form-Right
+	margin 0 1em
+	
+	input[type='submit']
+		position relative
+		left 25%
+		width 50%
+
+	
+.form-Right , .form-Left
+	display inline-block
+	vertical-align top
+	width 45%
+	input
+		margin 1em 0
+		display block
+		width 100%
+	textarea
+		margin 1em 0
+		display block
+		width 100%
+	select
+		margin 1em 0
+		display block
+		width 100%
+
+
 .principal-Description
 	text-align center
 	position absolute

@@ -493,10 +493,16 @@ body {
   color: #000;
   background: rgba(255,255,255,0.9);
 }
+.principal-Container .container .container-add {
+  margin: 4em 0;
+}
 .principal-Container .container .container-item {
   margin: 4em 0 0 0;
   background: #222;
   width: 100%;
+}
+.principal-Container .container .container-item a {
+  text-decoration: none;
 }
 .principal-Container .container .container-item .item {
   font-family: 'Playfair Display', serif;
@@ -504,6 +510,9 @@ body {
   vertical-align: top;
   margin: 2em 0 0 0;
   width: 20%;
+}
+.principal-Container .container .container-item .item:hover {
+  margin: 0.1em 0;
 }
 .principal-Container .container .container-item .item .item-Imagen {
   margin: 0;
@@ -525,12 +534,56 @@ body {
 .principal-Container .container .container-item .item .item-Imagen .item-Image-Description p {
   margin: 0;
 }
+.principal-Container .container .container-item .item .item-Imagen .item-Image-Description a {
+  color: #0188e1;
+  text-decoration: none;
+}
+.principal-Container .container .container-item .item .item-Imagen .item-Image-Description span {
+  color: rgba(255,255,255,0.9);
+}
 .principal-CV {
   position: absolute;
   top: 0;
   left: 20%;
   background: rgba(255,255,255,0.9);
   width: 80%;
+}
+.form-action {
+  margin: 5em 1em;
+}
+.form-Left,
+.form-Right {
+  margin: 0 1em;
+}
+.form-Left input[type='submit'],
+.form-Right input[type='submit'] {
+  position: relative;
+  left: 25%;
+  width: 50%;
+}
+.form-Right,
+.form-Left {
+  display: inline-block;
+  vertical-align: top;
+  width: 45%;
+}
+.form-Right input,
+.form-Left input {
+  margin: 1em 0;
+  display: block;
+  width: 100%;
+}
+.form-Right textarea,
+.form-Left textarea {
+  margin: 1em 0;
+  display: block;
+  width: 100%;
+}
+.form-Right select,
+.form-Left select {
+  margin: 1em 0;
+  display: block;
+  width: 100%;
 }
 .principal-Description {
   text-align: center;

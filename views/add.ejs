@@ -3,35 +3,88 @@
 <head>
 	<title>Subir Proyectos</title>
 	<meta charset="UTF-8"/>
-	<link rel='stylesheet' href='/stylesheets/style.css' />
+	<link rel="stylesheet"href='/stylesheets/estilos.css' />
+	<link href='http://fonts.googleapis.com/css?family=Arimo|Playfair+Display:400italic' rel='stylesheet' type='text/css'>
 </head>
 <body>
-	<nav>
-  		<ul>
-  			<li><a href="/">Inicio</a></li>
-  		</ul>
-  	</nav>
-	<form action="/" method="post">
-		<input type="text" name="title" placeholder="Titulo">
-		<br>
-		<input type="text" name="descriptionshorte" placeholder="Descripcion Corta">
-		<br>
-		<input type="text" name="description" placeholder="Tipo de Aplicación">
-		<br>
-		<br>
-		<input type="text" name="link" placeholder="link">
-		<br>
-		<input type="text" name="tecnologie" placeholder="tecnologie">
-		<br>
-		<input type="text" name="plataform" placeholder="plataform">
-		<br>
-		<input type="text" name="developer" placeholder="developer">
-		<br>
-		<input type="text" name="imagen" placeholder="imagen">
-		<br>
-		<input type="text" name="icon" placeholder="Icono">
-		<br>
-		<input type="submit">
+	<header class="main-Header">
+		
+		<figure class="header-Imagen">
+			<img src="/images/3.jpg" />
+			<figcaption class="header-Description">
+				<span>Héctor Campos Alonso</span>
+				<p>Ingeniero en Tecnológias de la Información </p>
+			</figcaption>
+		</figure>
+
+		<nav class="header-Nav">
+	      <ul class="header-List">
+	        <li class="header-list-item"><a href="/" class="icon-home" >Inicio</a></li>
+	        <li class="header-list-item"><a href="/galeria.html" class="icon-images" >Fotos</a></li>
+	        <li class="header-list-item"><a href="tutorial.html" class="icon-tutorial" >Tutoriales</a></li>
+	        <li class="header-list-item"><a href="/acerca-de" class="icon-user2">Acerca de Mi</a></li>
+	      </ul>
+    	</nav>	
+
+		<section class='header-Social'>
+			<a class="header-Social-Item" href="https://twitter.com/Huixcospartan"><img src="/images/twitter.png"></a>
+			<a class="header-Social-Item" href="https://www.facebook.com/AlonsoSilence"><img src="/images/facebook.png"></a>
+			<a class="header-Social-Item" href="https://github.com/AlonsoCampos"><img src="/images/github.png"></a>
+			<a class="header-Social-Item" href="http://www.youtube.com/channel/UCZOTedwROfSWgUwNarg3R1g"><img src="/images/youtube.png"></a>
+		</section>
+	</header>
+
+	<section class="principal-CV">
+		<article id='acerca-principal'>
+			<h1 id='acerca-titulo'>Agrega tus Projectos</h1>
+			<h2 id='acerca-subtitulo'>Muestra de que eres <strong>capaz</strong> al <strong>mundo entero</strong></h2>
+		</article>
+
+		<form class="form-action" action="/" method="post">
+		
+		<article class="form-Left">
+			<input type="text" name="title" placeholder="Titulo">
+			<select name="descriptionshorte">
+				<option selected>Seleccione un tipo de aplicación</option>
+				<option value ="Aplicación Movil">Aplicación Movil</option>
+				<option value ="Aplicación Escritorio">Aplicación Escritorio</option>
+				<option value ="Aplicación Web">Aplicación Web</option>
+				<option value ="Sitio Web">Sitio Web</option>
+			</select>
+			
+			<textarea name="description" placeholder="Descripcion de Aplicación"></textarea>
+			<input type="text" name="link" placeholder="Repositorio de Github">
+			<input type="text" name="tecnologie" placeholder="Herramientas utilizadas">
+			<select name="plataform">
+				<option selected>Seleccione la de plataforma</option>
+				<option value ="Android">Android</option>
+				<option value ="iPhone">iPhone o iPad</option>
+				<option value ="Windows">Windows Phone</option>
+				<option value ="Desktop">Escritorio</option>
+				<option value ="Aplicacion Web">Aplicacion Web</option>
+				<option value ="Sitio Web">Sitio Web</option>
+			</select>
+		</article>
+
+		<article class="form-Right">
+			<input type="text" name="developer" placeholder="Desarollador">
+			<input type="text" name="imagen" placeholder="imagen">
+			<select name="icon">
+				<option selected>Seleccione un icono</option>
+				<option value ="android">Android</option>
+				<option value ="iphone">iPhone o iPad</option>
+				<option value ="windows">Windows Phone</option>
+				<option value ="desktop">Escritorio</option>
+				<option value ="cloud">Aplicacion Web</option>
+				<option value ="web">Sitio Web</option>
+			</select>
+
+			<input type="submit" value="Confirmar">
+		</article>	
+		
 	</form>
+
+
+	</section>
 </body>
 </html>
