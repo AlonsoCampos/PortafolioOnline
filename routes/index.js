@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var _= require('lodash');
 var Projects = require('../lib/projects');
+var Users = require('../lib/users');
 
 /* 
 	GET lista los albums disponibles.
@@ -21,23 +22,87 @@ router.get('/', function(req, res) {
 
 });
 
+router.get('/acerca-de', function(req, res) {
+	Users.find({}, function(err,users){
+  	if (err) {
+  		return res.send(err);
+  	}
+  	res.render('acerca',{title: 'Héctor Campos Alonso',users:users});
+  });
+
+});
+
 router.get('/detalles/:project_id',function(req,res){
 	Projects.findById(req.params.project_id, function(err,project){
 		res.render('detalles',{project:project});
 	});
 });
 
-router.get('/acerca-de',function(req,res){
-	res.render('acerca');
-});
-
-
 
 router.get('/add',function(req,res){
 	res.render('add');
 });
 
-router.post('/', function(req,res){
+router.get('/registro',function(req,res){
+	res.render('registro');
+});
+
+
+router.post('/registro',function(req,res){
+	//debug('creating new artist');
+	var name = req.body.name;
+	var surnames = req.body.surnames;
+	var biography = req.body.biography;
+	var portafolio = req.body.portafolio;
+	var nationality = req.body.nationality;
+	var email = req.body.email;
+	var phone = req.body.phone;
+	var skills = req.body.skills;
+	var certifications = req.body.certifications;
+	var imagen = req.body.imagen;
+
+	console.log(req.body);
+	if(!_.isUndefined(name) 
+		|| 	name !=='' 
+		|| 	surnames !=='' 
+		||  biography !==''
+		||  portafolio !==''
+		||  certifications !==''
+		||  nationality !==''
+		||  email !==''
+		||  phone !==''
+		||  skills !==''
+		||  imagen !==''
+		){
+		var users = new Users(
+			{
+				name:name,
+				surnames: surnames,
+				biography:biography,
+				portafolio:portafolio,
+				nationality:nationality,
+				email:email,
+				skills:skills,
+				certifications:certifications,
+				phone:phone,
+				imagen:imagen,
+			});
+
+		users.save(function(err,users){
+			if(err){
+				return res.send(err);
+			}
+			res.send(users.name + ' Usuario Agregado');
+		});	
+	}else{
+		res.send("Por Favor especifique la informacion requerida");
+	}
+});
+
+
+
+
+router.post('/add', function(req,res){
 	//debug('creating new artist');
 	var title = req.body.title;
 	var descriptionshorte = req.body.descriptionshorte;

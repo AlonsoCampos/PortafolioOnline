@@ -40,31 +40,25 @@
 			<h1 id='acerca-titulo'>Héctor Campos Alonso</h1>
 			<h2 id='acerca-subtitulo'>Desarrollador <strong>Frontend</strong> y <strong>Backend</strong></h2>
 		</article>
-
+		<% users.forEach(function(users){ %>
+        
 		<article id="acerca-personal">
 			<article id="info-personal">
 				<p class="titulo-seccion">Personal</p>
-				<p><strong>Nombre:</strong> Hector Campos Alonso</p>
-				<p><strong>Ubicacion:</strong> Puebla</p>
-				<p><strong>Nacionalidad:</strong> Mexicano</p>
-				<p><strong>Correo:</strong> hectorcamposalonso@yahoo.es</p>
-				<p><strong>Telefono:</strong> ***********</p>
+				<p><strong>Nombre:</strong><%=users.name%></p>
+				<p><strong>Ubicacion:</strong> <%=users.nationality%></p>
+				<p><strong>Nacionalidad:</strong><%=users.nationality%></p>
+				<p><strong>Correo:</strong><%=users.email%></p>
+				<p><strong>Telefono:</strong> <%=users.phone%> </p>
 			</article>
 			<article id="info-premios">
 				<p class="titulo-seccion">Certificaciones</p>
-				<p><strong>Certificación</strong> - Android</p>
-				<p><strong>Certificación</strong> - Diseño Web</p>
-				<p><strong>Certificación</strong> - PHP con Laravel</p>
-				<p><strong>Certificación</strong> - Backend</p>
-				<p><strong>Certificación</strong> - Frontend</p>
+				<p><strong>Certificación</strong> - <%=users.certification%></p>
 			</article>
 			<article id="info-habilidades">
 				<p class="titulo-seccion">Habilidades</p>
-				<p>Diseñador & Desarrollador Web</p>
-				<p>HTML5/CSS3</p>
-				<p>Desarrollador de Aplicaciones Mobiles</p>
-				<p>UI & UX Design</p>
-				<p>SEO</p>
+				<p><%=users.skills%></p>
+				
 			</article>
 		</article>
 
@@ -72,22 +66,15 @@
 			
 			<article id="acerca-bio">
 				<p class="titulo-seccion">Biografia</p>	
-
-							<p>Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit.  </p>
-
-							<p>Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that's what you see at a toy store. And you must think you're in a toy store, because you're here shopping for an infant named Jeb. </p>
-
-							<p>Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing. </p>
+							<p><%=users.biography%> </p>
 			</article>
 			<article id="acerca-portafolio">
 				<p class="titulo-seccion">Portafolio</p>
-				    <p>http:wwww.google.com</p>
-				    <p>http:wwww.google.com</p>
-				    <p>http:wwww.google.com</p>
+				    <p><%=users.portafolio%></p>
 				    
 			</article>
 		</article>
-
+		 <%})%>
 		<article id="acerca-historial">
 
 			<article id="ultimo-trabajo">
